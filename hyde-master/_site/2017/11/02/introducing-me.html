@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Using Jekyll with Hyde &middot; My Blog
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+                                 <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0d">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          My Blog
+        </a>
+      </h1>
+      <p class="lead">A brazen blog all about me that is contained within a prominent sidebar and uncomplicated content. Made by Me.</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about.html">About</a>
+          
+        
+      
+        
+      
+        
+          
+        
+      
+
+      <a class="sidebar-nav-item" href="https://github.com/poole/hyde/archive/v2.1.0.zip">Download</a>
+      <a class="sidebar-nav-item" href="https://github.com/poole/hyde">GitHub project</a>
+      <span class="sidebar-nav-item">Currently v2.1.0</span>
+    </nav>
+
+    <p>&copy; 2017. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Using Jekyll with Hyde</h1>
+  <span class="post-date">02 Nov 2017</span>
+  <p>Hi, this is a blog about me, Dominic Kiehn using Jekyll!</p>
+
+<h3 id="using-jekyll">Using Jekyll</h3>
+
+<p>Here’s what I think about Jekyll:</p>
+
+<ul>
+  <li>Adding new pages and content is pretty easy, since Markdown is more intuitive than using HTML although not quite as simple as adding new pages and posts using a dynamic CMS like Wordpress</li>
+  <li>One of the annoying things that would trouble laymen is the need to use terminal and command line often, something that would be scary for anyone not a developer.</li>
+  <li>Customising themes is about as hard as it is for Wordpress, maybe slightly harder.</li>
+</ul>
+
+<h3 id="installation">Installation</h3>
+
+<ul>
+  <li>Installation of Jekyll was difficult at first since it required Ruby to be updated along with Ruby Gems. Doing so on Mac OSX was tricky but once that was finished Jekyll was much easier to install. See the installation guide <a href="https://jekyllrb.com/docs/installation/">here</a>.</li>
+  <li>Also this easy-to-follow guide touches on Installation of Jekyll as well as the rest of setting up a Jekyll website using the Hyde theme.
+*Assuming that all pre-requisite system requirements are installed, just go to terminal and type:<br />
+<code class="highlighter-rouge">$ gem install jekyll</code></li>
+</ul>
+
+<h3 id="setting-up-the-website">Setting up the website</h3>
+<ul>
+  <li>
+    <p>Creating a new website with the default Jekyll settings is the next step. I ran the website on my desktop like so:<br />
+<code class="highlighter-rouge">$ cd Desktop/</code><br />
+<code class="highlighter-rouge">$ jekyll new portfolio</code></p>
+  </li>
+  <li>
+    <p>Now go into the folder of the new website in the terminal and run the website on a local server like so:<br />
+<code class="highlighter-rouge">cd portfolio/</code><br />
+<code class="highlighter-rouge">jekyll serve</code></p>
+  </li>
+  <li>
+    <p>Open localhost:4000 in the browser and it should appear like this:
+<img src="/assets/Screenshot 2017-11-01 19.41.19.png" alt="screenshot" title="Screenshot of vanilla Jekyll website" /></p>
+  </li>
+</ul>
+
+<h3 id="adding-hyde">Adding Hyde</h3>
+
+<ul>
+  <li>
+    <p>The website’s appearance is a little underwhelming. Let’s add one of the more popular themes, Hyde (Get it? Jekyll and Hyde?) to the website to spice it up</p>
+  </li>
+  <li>
+    <p>Since we haven’t made any content in the portfolio website, we can just ditch it. In the terminal, just go ‘control -c’ to stop the website being run in the server</p>
+  </li>
+  <li>Download the theme, just go to https://github.com/poole/hyde and download the .zip file</li>
+  <li>Unzip the file, move the folder ‘hyde-master’ to the desktop</li>
+  <li>
+    <p>Go into the folder in Terminal</p>
+  </li>
+  <li>Use the <code class="highlighter-rouge">jekyll serve</code> command.</li>
+  <li>
+    <p>If there are any errors, it is likely due to Hyde being built on an older version of Jekyll that’s no longer compatible. If that’s the case then just find the _config.yml file within the folder and change the settings to these:
+<img src="/assets/Screenshot 2017-11-02 09.01.28.png" alt="screenshot" title="Screenshot of current settings" /></p>
+  </li>
+  <li>
+    <p>The settings should now work, use <code class="highlighter-rouge">jekyll serve</code> again, then go to localhost:4000.</p>
+  </li>
+  <li>The website should now look like this:
+<img src="/assets/Screenshot 2017-11-01 20.29.11.png" alt="screenshot" title="Screenshot of current settings" /></li>
+</ul>
+
+<h3 id="customising-the-website">Customising the website</h3>
+<ul>
+  <li>The theme can be further edited to change the colours, by changing the class of the body in /_layouts/default.html</li>
+  <li>
+    <p>See the different 8 different theme colours available:
+<img src="https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png" alt="Hyde theme classes" /></p>
+  </li>
+  <li>
+    <p>This website uses <code class="highlighter-rouge">.theme-base-0d</code></p>
+  </li>
+  <li>
+    <p>The website layout can also be reversed by adding “layout-reverse” class to the ‘body’ element in default.html</p>
+  </li>
+  <li>
+    <p>Any further editing appearance-wise can be done by editing the ‘hyde.css’ and ‘poole.css’ files. Keep in mind that the Hyde theme is built on top of the Poole theme, so both will have to be edited. They can be found by going to /hyde-master/public/css</p>
+  </li>
+  <li>
+    <p>Editing the structure of the website by coding over the head.html and sidebar.html files in the ‘_includes’ folder and the default.html, page.html, and post.html files in the _layouts folder</p>
+  </li>
+  <li>
+    <p>You should never touch the ‘_site’ folder as is simply the final product of Jekyll compiling and rendering all the other files and folders outside the folder. Any inconsistency between files in the _site folder and the rest of the files outside the folder could risk breaking the website!</p>
+  </li>
+  <li>Posts are kept in the ‘_posts’ folder. Simply copy one of the example posts as a template and start editing to add new content to the website.</li>
+</ul>
+
+<h3 id="cross-browser">Cross-browser</h3>
+
+<p>This website was tested using Google Chrome, Safari, and Opera. There were no difference to be noted across the three sites.</p>
+
+<p>Thanks for reading my blog post!</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2013/12/28/introducing-hyde.html">
+            Introducing Hyde
+            <small>28 Dec 2013</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2012/02/07/example-content.html">
+            Example content
+            <small>07 Feb 2012</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2012/02/06/whats-jekyll.html">
+            What's Jekyll?
+            <small>06 Feb 2012</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>
